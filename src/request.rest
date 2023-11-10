@@ -1,0 +1,29 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbiOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSnVsaWEiLCJpYXQiOjE2OTg1MjMyOTYsImV4cCI6MTY5ODUyMzM1Nn0.Bm0JhDz6qJst_5WGarcnxVxF0lZA-9CBdj3L4r10YbI
+###
+
+POST http://localhost:5000/users/message
+Content-Type: application/json
+
+
+{
+  "name": "Kuba",
+  "password": "password"
+}
+
+
+###
+
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+
+{
+  "name": "Kuba",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:5000//addActivity
+Content-Type: application/json

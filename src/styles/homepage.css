@@ -1,0 +1,32 @@
+.home-container p{
+  font-size: 20px;
+  color: red;
+}
+
+.home-container{
+  font-size: 20px;
+  display:flex;
+}
+
+
+
+.react-calendar {
+  top: 100px;
+  width:100%;
+}
+
+.column {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.column:first-child {
+  flex: 3; /* 80% */
+}
+
+.column:last-child {
+  flex: 2; /* 20% */
+}
+
+
+

@@ -1,0 +1,65 @@
+
+.loginForm{
+  border-style: double;
+  width: 310px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  padding-bottom: 10px;
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.loginForm input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.loginForm input[type="submit"]:hover {
+  background: #6cf0c2;
+}
+
+.loginForm .button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.loginForm .login-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.loginForm .list-container {
+  display: flex;
+}
+
+.loginForm .error {
+  color: red;
+  font-size: 12px;
+}
+
+.loginForm .title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.loginForm .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
