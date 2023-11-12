@@ -3,7 +3,7 @@ create .babelrc {
   "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": ["@babel/plugin-transform-react-jsx"]
 }
-create .ENV in src folder 
+create .env in src folder 
 Command to run on server 
 
 clean npm cashe
