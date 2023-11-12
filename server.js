@@ -14,7 +14,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 const schedule = require('node-schedule');
-
+const urlHost = "51.20.120.30"
 app.use(express.json())
 app.use(cookieParser())
 app.use(session({
@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const cors = require('cors');
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: `http://${urlHost}:3000`,
     credentials: true,
 }));
 
@@ -77,13 +77,13 @@ app.post('/login',  (req, res) => {
         req.session.user = user;
         console.log(req.session.user)     
         console.log("poprawnie zalgowany")
-        res.redirect('http://localhost:3000/')
+        res.redirect(`http://${urlHost}:3000`)
       }else{
         res.send('Not Allowed')
       }
       }catch(err) {
         console.log(err)
-        res.redirect('http://localhost:3000/')
+        res.redirect(`http://${urlHost}:3000`)
       }
   })
 })
@@ -188,7 +188,7 @@ app.post('/addActivity',(req, res) => {
                         "alert" : false}
       }
     })
-    res.redirect('http://localhost:3000/')
+    res.redirect(`http://${urlHost}:3000`)
 });
 
 app.post('/deleteActivity', protectRoute, (req, res) => {
@@ -204,7 +204,7 @@ app.post('/deleteActivity', protectRoute, (req, res) => {
         }
       }
     })
-    res.redirect('http://localhost:3000/')
+    res.redirect(`http://${urlHost}:3000`)
 });
 
 app.post('/logout', protectRoute, (req, res) => {
@@ -212,7 +212,7 @@ app.post('/logout', protectRoute, (req, res) => {
     if (err) {
       console.error(err);
     }
-    res.redirect('http://localhost:3000/'); // Redirect to the login page or wherever you want
+    res.redirect(`http://${urlHost}:3000`); // Redirect to the login page or wherever you want
   });
 });
 
@@ -225,4 +225,6 @@ function generateAccessToken(user) {
   return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
 }
 
-app.listen(port)
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on port ${port}`);
+});

@@ -9,6 +9,7 @@ import { fetchDataFromAPI } from "./utils";
 import React, { useState } from "react";
 
 let userName = ""
+const ipHost = "51.20.120.30"
  function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   console.log("Glowny komponent")
@@ -32,7 +33,7 @@ let userName = ""
 export default App;
 
 async function proceesData(setIsLoggedIn){
-  const apiUrl = 'http://localhost:5000/profile'; // Replace with the actual API endpoint
+  const apiUrl = `http://${ipHost}:5000/profile`; // Replace with the actual API endpoint
   try {
     const apiData = await fetchDataFromAPI(apiUrl);
     console.log('API Response:', apiData);
