@@ -48,7 +48,7 @@ export default function Navbar(props){
                   <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>          
                     <CustomLink className="sub-menu-item" to="/account">Ustawienia konta</CustomLink> 
                     <li>
-                      <form action="http://localhost:5000/logout" method="POST" id="logoutForm">
+                      <form action="http://51.20.120.30:5000/logout" method="POST" id="logoutForm">
                         <a className="sub-menu-item sub-menu-item-js">Wyloguj</a>
                       </form>
                     </li>

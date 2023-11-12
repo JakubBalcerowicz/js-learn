@@ -14,7 +14,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 const schedule = require('node-schedule');
-const urlHost = "localhost"
+const urlHost = "51.20.120.30"
 app.use(express.json())
 app.use(cookieParser())
 app.use(session({
