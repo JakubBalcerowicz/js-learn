@@ -9,7 +9,7 @@ import { fetchDataFromAPI } from "./utils";
 import React, { useState } from "react";
 
 let userName = ""
-const ipHost = "localhost"
+const ipHost = "51.20.120.30"
  function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   console.log("Glowny komponent")
