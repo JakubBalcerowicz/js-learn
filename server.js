@@ -26,7 +26,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 const bodyParser = require('body-parser'); // middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 

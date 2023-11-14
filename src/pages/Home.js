@@ -18,7 +18,7 @@ export default function Home(props){
             <div className="column"> 
               <Calendar onChange = {onChange} value={value}/>
               <p>Wiadmosci:</p>
-              <form className = "addActivity-form"action="http://51.20.120.30:5000/addActivity" method="post">
+              <form className = "addActivity-form"action="http://localhost:5000/addActivity" method="post">
                 <div className="input-container">
                   <input type="hidden" value = {value} name="data" required />
                 </div>
@@ -58,7 +58,7 @@ export default function Home(props){
 
 function getData(userName, selectedDate){
 
-  const baseUrl = 'http://51.20.120.30:5000/usersData'
+  const baseUrl = 'http://localhost:5000/usersData'
 
   let weekViewHTML=""
   let dayViewHTML =""
